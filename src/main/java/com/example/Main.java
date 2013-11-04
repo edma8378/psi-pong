@@ -38,7 +38,11 @@ public class Main {
         //container. Setting parent loader priority to true changes this behavior.
         //Read more here: http://wiki.eclipse.org/Jetty/Reference/Jetty_Classloading
         root.setParentLoaderPriority(true);
-        
+	
+	Pong applet = new Pong();
+	applet.init();
+	applet.start();
+	        
         server.setHandler(root);
         
         server.start();
